@@ -9,19 +9,19 @@ class CategoriesScreen extends StatelessWidget {
 
   void _showAddCategoryDialog(BuildContext context) {
     final titleController = TextEditingController();
-    int selectedColorValue = Colors.indigo.value;
+    int selectedColorValue = 0xFF3F51B5;
     int selectedIconCodePoint = Icons.folder_rounded.codePoint;
 
     final colors = [
-      Colors.indigo.value,
-      Colors.purple.value,
-      Colors.blue.value,
-      Colors.teal.value,
-      Colors.green.value,
-      Colors.amber.value,
-      Colors.orange.value,
-      Colors.red.value,
-      Colors.pink.value,
+      0xFF3F51B5, // Indigo
+      0xFF9C27B0, // Purple
+      0xFF2196F3, // Blue
+      0xFF009688, // Teal
+      0xFF4CAF50, // Green
+      0xFFFFC107, // Amber
+      0xFFFF9800, // Orange
+      0xFFF44336, // Red
+      0xFFE91E63, // Pink
     ];
 
     final icons = [
@@ -98,7 +98,7 @@ class CategoriesScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: isSelected
-                                ? Color(selectedColorValue).withOpacity(0.2)
+                                ? Color(selectedColorValue).withValues(alpha: 0.2)
                                 : Colors.transparent,
                             borderRadius: BorderRadius.circular(8),
                             border: isSelected
@@ -186,7 +186,7 @@ class CategoriesScreen extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: cat.color.withOpacity(0.18),
+                            color: cat.color.withValues(alpha: 0.18),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(cat.icon, color: cat.color, size: 24),

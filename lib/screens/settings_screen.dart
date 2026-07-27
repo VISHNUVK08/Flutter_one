@@ -157,34 +157,46 @@ class SettingsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 12),
+                  // ignore: deprecated_member_use
                   ListTile(
                     title: const Text('System Default'),
                     leading: const Icon(Icons.brightness_auto_rounded),
+                    // ignore: deprecated_member_use
                     trailing: Radio<ThemeMode>(
                       value: ThemeMode.system,
+                      // ignore: deprecated_member_use
                       groupValue: provider.themeMode,
+                      // ignore: deprecated_member_use
                       onChanged: (val) {
                         if (val != null) provider.setThemeMode(val);
                       },
                     ),
                   ),
+                  // ignore: deprecated_member_use
                   ListTile(
                     title: const Text('Light Theme'),
                     leading: const Icon(Icons.light_mode_rounded, color: Colors.amber),
+                    // ignore: deprecated_member_use
                     trailing: Radio<ThemeMode>(
                       value: ThemeMode.light,
+                      // ignore: deprecated_member_use
                       groupValue: provider.themeMode,
+                      // ignore: deprecated_member_use
                       onChanged: (val) {
                         if (val != null) provider.setThemeMode(val);
                       },
                     ),
                   ),
+                  // ignore: deprecated_member_use
                   ListTile(
                     title: const Text('Dark Theme'),
                     leading: const Icon(Icons.dark_mode_rounded, color: Colors.indigoAccent),
+                    // ignore: deprecated_member_use
                     trailing: Radio<ThemeMode>(
                       value: ThemeMode.dark,
+                      // ignore: deprecated_member_use
                       groupValue: provider.themeMode,
+                      // ignore: deprecated_member_use
                       onChanged: (val) {
                         if (val != null) provider.setThemeMode(val);
                       },

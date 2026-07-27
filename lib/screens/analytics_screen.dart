@@ -13,7 +13,6 @@ class AnalyticsScreen extends StatelessWidget {
     final completed = provider.completedTaskCount;
     final active = provider.activeTaskCount;
     final overdue = provider.overdueTaskCount;
-    final starred = provider.starredTaskCount;
     final rate = provider.overallCompletionRate;
 
     final categories = provider.categories;
@@ -43,7 +42,7 @@ class AnalyticsScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: [
                   BoxShadow(
-                    color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                    color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
                     blurRadius: 16,
                     offset: const Offset(0, 8),
                   ),
@@ -192,7 +191,7 @@ class AnalyticsScreen extends StatelessWidget {
                             child: LinearProgressIndicator(
                               value: pRatio,
                               minHeight: 8,
-                              backgroundColor: p.color.withOpacity(0.12),
+                              backgroundColor: p.color.withValues(alpha: 0.12),
                               valueColor: AlwaysStoppedAnimation<Color>(p.color),
                             ),
                           ),
@@ -254,7 +253,7 @@ class AnalyticsScreen extends StatelessWidget {
                             child: LinearProgressIndicator(
                               value: catRatio,
                               minHeight: 8,
-                              backgroundColor: cat.color.withOpacity(0.12),
+                              backgroundColor: cat.color.withValues(alpha: 0.12),
                               valueColor: AlwaysStoppedAnimation<Color>(cat.color),
                             ),
                           ),
@@ -288,7 +287,7 @@ class AnalyticsScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.15),
+                color: color.withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(icon, color: color, size: 24),

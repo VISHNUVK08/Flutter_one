@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/todo_item.dart';
 import '../models/subtask.dart';
-import '../models/category.dart';
 import '../providers/task_provider.dart';
 
 class TaskDetailDialog extends StatefulWidget {
@@ -283,7 +282,7 @@ class _TaskDetailDialogState extends State<TaskDetailDialog> {
                                   ),
                                   selected: isSelected,
                                   selectedColor: priority.color,
-                                  backgroundColor: priority.color.withOpacity(0.1),
+                                  backgroundColor: priority.color.withValues(alpha: 0.1),
                                   onSelected: (selected) {
                                     if (selected) {
                                       setState(() {
@@ -312,7 +311,7 @@ class _TaskDetailDialogState extends State<TaskDetailDialog> {
                                   ),
                                   const SizedBox(height: 6),
                                   DropdownButtonFormField<String>(
-                                    value: _selectedCategoryId,
+                                    initialValue: _selectedCategoryId,
                                     decoration: const InputDecoration(
                                       contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                     ),

@@ -14,6 +14,8 @@ class TaskCategory {
   });
 
   Color get color => Color(colorValue);
+
+  // ignore: non_const_argument_for_const_parameter
   IconData get icon => IconData(iconCodePoint, fontFamily: 'MaterialIcons');
 
   Map<String, dynamic> toJson() {
@@ -39,37 +41,37 @@ class TaskCategory {
     TaskCategory(
       id: 'personal',
       name: 'Personal',
-      colorValue: Colors.purple.value,
+      colorValue: 0xFF9C27B0,
       iconCodePoint: Icons.person_rounded.codePoint,
     ),
     TaskCategory(
       id: 'work',
       name: 'Work',
-      colorValue: Colors.blue.value,
+      colorValue: 0xFF2196F3,
       iconCodePoint: Icons.work_rounded.codePoint,
     ),
     TaskCategory(
       id: 'shopping',
       name: 'Shopping',
-      colorValue: Colors.orange.value,
+      colorValue: 0xFFFF9800,
       iconCodePoint: Icons.shopping_cart_rounded.codePoint,
     ),
     TaskCategory(
       id: 'health',
       name: 'Health & Fitness',
-      colorValue: Colors.green.value,
+      colorValue: 0xFF4CAF50,
       iconCodePoint: Icons.favorite_rounded.codePoint,
     ),
     TaskCategory(
       id: 'learning',
       name: 'Learning',
-      colorValue: Colors.teal.value,
+      colorValue: 0xFF009688,
       iconCodePoint: Icons.school_rounded.codePoint,
     ),
     TaskCategory(
       id: 'finance',
       name: 'Finance',
-      colorValue: Colors.amber.value,
+      colorValue: 0xFFFFC107,
       iconCodePoint: Icons.attach_money_rounded.codePoint,
     ),
   ];

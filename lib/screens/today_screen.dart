@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/todo_item.dart';
-import '../models/subtask.dart';
 import '../providers/task_provider.dart';
 import 'task_detail_dialog.dart';
 
@@ -79,7 +78,7 @@ class TodayScreen extends StatelessWidget {
                       gradient: LinearGradient(
                         colors: [
                           Theme.of(context).colorScheme.primary,
-                          Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                          Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -87,7 +86,7 @@ class TodayScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Theme.of(context).colorScheme.primary.withOpacity(0.25),
+                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.25),
                           blurRadius: 12,
                           offset: const Offset(0, 6),
                         ),
@@ -123,7 +122,7 @@ class TodayScreen extends StatelessWidget {
                           child: LinearProgressIndicator(
                             value: progress,
                             minHeight: 10,
-                            backgroundColor: Colors.white.withOpacity(0.25),
+                            backgroundColor: Colors.white.withValues(alpha: 0.25),
                             valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                           ),
                         ),
@@ -156,9 +155,9 @@ class TodayScreen extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(0.12),
+                    color: Colors.red.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: Colors.red.withOpacity(0.3)),
+                    border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
                   ),
                   child: Row(
                     children: [
@@ -211,7 +210,7 @@ class TodayScreen extends StatelessWidget {
                         Icon(
                           Icons.wb_sunny_rounded,
                           size: 72,
-                          color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
                         ),
                         const SizedBox(height: 16),
                         const Text(
@@ -256,7 +255,7 @@ class TodayScreen extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            color: color.withOpacity(0.85),
+            color: color.withValues(alpha: 0.85),
             fontSize: 12,
           ),
         ),
@@ -319,7 +318,7 @@ class TodayScreen extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                               decoration: BoxDecoration(
-                                color: category.color.withOpacity(0.15),
+                                color: category.color.withValues(alpha: 0.15),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Row(
@@ -344,7 +343,7 @@ class TodayScreen extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                               decoration: BoxDecoration(
-                                color: task.priority.color.withOpacity(0.15),
+                                color: task.priority.color.withValues(alpha: 0.15),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Text(
@@ -398,7 +397,7 @@ class TodayScreen extends StatelessWidget {
                         child: LinearProgressIndicator(
                           value: task.completionProgress,
                           minHeight: 4,
-                          backgroundColor: Colors.grey.withOpacity(0.2),
+                          backgroundColor: Colors.grey.withValues(alpha: 0.2),
                           valueColor: AlwaysStoppedAnimation<Color>(category.color),
                         ),
                       ),

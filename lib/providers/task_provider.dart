@@ -329,7 +329,7 @@ class TaskProvider extends ChangeNotifier {
       orElse: () => TaskCategory(
         id: 'general',
         name: 'General',
-        colorValue: Colors.grey.value,
+        colorValue: 0xFF9E9E9E,
         iconCodePoint: Icons.category_rounded.codePoint,
       ),
     );
