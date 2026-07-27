@@ -67,7 +67,7 @@ class TaskProvider extends ChangeNotifier {
     _tasks = [
       TodoItem(
         id: '1',
-        title: 'Design TaskMaster UI Concept 🎨',
+        title: 'Design VK Task Manager UI Concept 🎨',
         notes: 'Create vibrant Material 3 themes, dark mode palette, and card components.',
         isCompleted: true,
         priority: TaskPriority.high,

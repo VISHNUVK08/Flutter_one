@@ -9,13 +9,13 @@ void main() async {
   final storageService = await StorageService.init();
   final taskProvider = TaskProvider(storageService);
 
-  runApp(TaskMasterApp(provider: taskProvider));
+  runApp(VKTaskManagerApp(provider: taskProvider));
 }
 
-class TaskMasterApp extends StatelessWidget {
+class VKTaskManagerApp extends StatelessWidget {
   final TaskProvider provider;
 
-  const TaskMasterApp({super.key, required this.provider});
+  const VKTaskManagerApp({super.key, required this.provider});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class TaskMasterApp extends StatelessWidget {
         }
 
         return MaterialApp(
-          title: 'TaskMaster Pro',
+          title: 'VK Task Manager',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,

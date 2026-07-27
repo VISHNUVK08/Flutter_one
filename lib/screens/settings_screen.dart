@@ -273,7 +273,7 @@ class SettingsScreen extends StatelessWidget {
                       Icon(Icons.info_outline_rounded, color: Colors.indigo),
                       SizedBox(width: 8),
                       Text(
-                        'TaskMaster Pro',
+                        'VK Task Manager',
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ],
